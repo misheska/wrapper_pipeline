@@ -6,4 +6,5 @@ description      'Installs/Configures wrapper_pipeline'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
+depends "emacs"
 depends "pipeline"
