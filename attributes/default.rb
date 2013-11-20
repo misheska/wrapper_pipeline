@@ -4,6 +4,7 @@ default['pipeline']['github']['clone_url'] = 'git@github.com:stephenlauck/cookbo
 default['pipeline']['github']['branch'] = '*/master'
 
 default['pipeline']['chef_server']['url'] = "http://localhost:8889"
+default['pipeline']['chef-zero'] = true
 
 # some fake keys
 default['pipeline']['chef_server']['user_pem'] = '-----BEGIN RSA PRIVATE KEY-----
