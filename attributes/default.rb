@@ -1,7 +1,7 @@
 
-default['pipeline']['github']['repo_url'] = 'https://github.com/stephenlauck/cookbooks'
-default['pipeline']['github']['clone_url'] = 'http://github.com/stephenlauck/cookbooks.git'
-default['pipeline']['github']['branch'] = '*/master'
+default['pipeline']['berkshelf']['repo_url'] = 'https://github.com/stephenlauck/cookbooks'
+default['pipeline']['berkshelf']['clone_url'] = 'http://github.com/stephenlauck/cookbooks.git'
+default['pipeline']['berkshelf']['branch'] = '*/master'
 
 default['pipeline']['chef_server']['url'] = "http://localhost:8889"
 default['pipeline']['chef-zero'] = true
