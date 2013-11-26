@@ -1,13 +1,27 @@
 
-default['pipeline']['berkshelf']['repo_url'] = 'https://github.com/stephenlauck/cookbooks'
-default['pipeline']['berkshelf']['clone_url'] = 'http://github.com/stephenlauck/cookbooks.git'
+default['pipeline']['berkshelf']['repo_url'] = 'https://github.com/stephenlauck/pipeline_chef'
+default['pipeline']['berkshelf']['clone_url'] = 'http://github.com/stephenlauck/pipeline_chef.git'
 default['pipeline']['berkshelf']['branch'] = '*/master'
 
-default['pipeline']['chef_server']['url'] = "http://localhost:8889"
+default['pipeline']['spiceweasel']['repo_url']                = "https://github.com/stephenlauck/pipeline_chef"
+default['pipeline']['spiceweasel']['clone_url']               = "http://github.com/stephenlauck/pipeline_chef.git"
+default['pipeline']['spiceweasel']['branch']                  = "*/master"
+default['pipeline']['spiceweasel']['yml_file']                = "infrastructure.yml"
+
+default['pipeline']['knife']['plugins']                      = %w[ knife-rackspace ]
+
+default['pipeline']['knife']['providers']                    = [
+  { "rackspace_api_username" => "YOUR_KEY" },
+  { "rackspace_api_key" => "YOUR_KEY_ID" }
+]
+
 default['pipeline']['chef-zero'] = true
 
+default['pipeline']['chef_server']['url'] = "http://127.0.0.1:8889"
+default['pipeline']['chef_server']['validation_client_name'] = "chef-zero-validator"
+
 # some fake keys
-default['pipeline']['chef_server']['user_pem'] = '-----BEGIN RSA PRIVATE KEY-----
+default['pipeline']['chef_server']['client_key'] = '-----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAyd4VInXBK+XlGFSkFv80Kgifr8/5LOi/HBF3VhLRxM/GkgnN
 fds/lhzNq3NH3ZjDhMbS5vOisrVW00DgvlyzsFJAjVGKNEW+S9BqTiYAQzmpRp6Y
 QRYAm5sEuhZgY5m7WWuFrW/zayR2wllanirBdIlfY9TnF+w1NecKAqbW4QH5XIWk
@@ -34,7 +48,7 @@ nASCOP1XaGtY8yUt6g0kf6oBKFQzTuLbSq/Q9jD5vBcOe9y/9Byyo/zFp78+o8ro
 EsiD4T/QWjQB+4GVHaJgcTQKJ/GUV5nJzU7w3iqg59T2Jei9dFDEQdo0shhRmiSS
 o4tHvxPxlAq4ssoq7X/1zgVIEanEt1+yaq/iiXaF7qVremjDKB0=
 -----END RSA PRIVATE KEY-----'
-default['pipeline']['chef_server']['validation_pem'] = '-----BEGIN RSA PRIVATE KEY-----
+default['pipeline']['chef_server']['validation_key'] = '-----BEGIN RSA PRIVATE KEY-----
 MIIEogIBAAKCAQEAyd4VInXBK+XlGFSkFv80Kgifr8/5LOi/HBF3VhLRxM/GkgnN
 fds/lhzNq3NH3ZjDhMbS5vOisrVW00DgvlyzsFJAjVGKNEW+S9BqTiYAQzmpRp6Y
 QRYAm5sEuhZgY5m7WWuFrW/zayR2wllanirBdIlfY9TnF+w1NecKAqbW4QH5XIWk
