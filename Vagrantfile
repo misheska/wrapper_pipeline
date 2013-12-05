@@ -82,13 +82,9 @@ Vagrant.configure("2") do |config|
   config.omnibus.chef_version = :latest
 
   config.vm.provision :chef_solo do |chef|
-    chef.json = {
-      :mysql => {
-        :server_root_password => 'rootpass',
-        :server_debian_password => 'debpass',
-        :server_repl_password => 'replpass'
-      }
-    }
+
+    chef.data_bags_path = '../pipeline_chef/data_bags'
+    chef.json = { }
 
     chef.run_list = [
         "recipe[wrapper_pipeline::default]"
