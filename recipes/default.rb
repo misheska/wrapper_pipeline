@@ -9,4 +9,3 @@
 
 include_recipe "emacs"
 include_recipe "pipeline"
-include_recipe "pipeline::spiceweasel"
