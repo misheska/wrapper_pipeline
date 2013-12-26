@@ -2,7 +2,7 @@ site :opscode
 
 metadata
 
-cookbook 'pipeline', git: 'git@github.com:stephenlauck/pipeline.git'
+cookbook 'pipeline', git: 'git@github.com:stephenlauck/pipeline.git', branch: 'lwrp_pipeline'
 cookbook 'jenkins', git: 'git@github.com:opscode-cookbooks/jenkins.git'
 
 group :integration do
