@@ -1,14 +1,14 @@
 
 default['pipeline']['berkshelf']['repo_url'] = 'https://github.com/stephenlauck/pipeline_chef'
-default['pipeline']['berkshelf']['clone_url'] = 'http://github.com/stephenlauck/pipeline_chef.git'
+default['pipeline']['berkshelf']['clone_url'] = 'https://github.com/stephenlauck/pipeline_chef.git'
 default['pipeline']['berkshelf']['branch'] = '*/master'
 
 default['pipeline']['spiceweasel']['repo_url']                = "https://github.com/stephenlauck/pipeline_chef"
-default['pipeline']['spiceweasel']['clone_url']               = "http://github.com/stephenlauck/pipeline_chef.git"
+default['pipeline']['spiceweasel']['clone_url']               = "https://github.com/stephenlauck/pipeline_chef.git"
 default['pipeline']['spiceweasel']['branch']                  = "*/master"
 default['pipeline']['spiceweasel']['yml_file']                = "infrastructure.yml"
 
-default['pipeline']['knife']['plugins']                      = %w[ knife-rackspace ]
+default['pipeline']['knife']['plugins']                      = %w[ ]
 
 default['pipeline']['knife']['providers']                    = [
   { "rackspace_api_username" => "YOUR_KEY" },

@@ -7,5 +7,5 @@
 # All rights reserved - Do Not Redistribute
 #
 
-include_recipe "emacs"
+# include_recipe "emacs"
 include_recipe "pipeline"
