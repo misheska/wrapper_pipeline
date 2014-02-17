@@ -1,10 +1,9 @@
-
-default['pipeline']['berkshelf']['repo_url'] = 'https://github.com/stephenlauck/pipeline_chef'
-default['pipeline']['berkshelf']['clone_url'] = 'https://github.com/stephenlauck/pipeline_chef.git'
+default['pipeline']['berkshelf']['repo_url'] = 'https://github.com/misheska/pipeline_chef'
+default['pipeline']['berkshelf']['clone_url'] = 'https://github.com/misheska/pipeline_chef.git'
 default['pipeline']['berkshelf']['branch'] = '*/master'
 
-default['pipeline']['spiceweasel']['repo_url']                = "https://github.com/stephenlauck/pipeline_chef"
-default['pipeline']['spiceweasel']['clone_url']               = "https://github.com/stephenlauck/pipeline_chef.git"
+default['pipeline']['spiceweasel']['repo_url']                = "https://github.com/misheska/pipeline_chef"
+default['pipeline']['spiceweasel']['clone_url']               = "https://github.com/misheska/pipeline_chef.git"
 default['pipeline']['spiceweasel']['branch']                  = "*/master"
 default['pipeline']['spiceweasel']['yml_file']                = "infrastructure.yml"
 
@@ -17,7 +16,8 @@ default['pipeline']['knife']['providers']                    = [
 
 default['pipeline']['chef-zero'] = true
 
-default['pipeline']['chef_server']['url'] = "http://127.0.0.1:8889"
+#default['pipeline']['chef_server']['url'] = "http://127.0.0.1:8889"
+default['pipeline']['chef_server']['url'] = "https://127.0.0.1:8889"
 default['pipeline']['chef_server']['validation_client_name'] = "chef-zero-validator"
 
 # some fake keys
