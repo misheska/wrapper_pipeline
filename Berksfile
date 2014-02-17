@@ -5,6 +5,7 @@ metadata
 # cookbook 'pipeline', git: 'git@github.com:stephenlauck/pipeline.git'
 # cookbook 'pipeline', path: '/Users/stephen/dev/pipeline_project/pipeline'
 cookbook 'pipeline', git: 'https://github.com/misheska/pipeline.git'
+cookbook 'yum', git: 'https://github.com/opscode-cookbooks/yum.git'
 
 
 group :integration do
